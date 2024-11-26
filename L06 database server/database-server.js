@@ -10,7 +10,7 @@ async function fetchTasksFromMingiDB() {
     if (loadingIndicator)
         loadingIndicator.style.display = "block";
     try {
-        const response = await fetch(`${MINGI_DB_URL}${COLLECTION_NAME}`);
+        const response = await fetch(`${MINGI_DB_URL}${COLLECTION_NAME}.json`);
         if (!response.ok)
             throw new Error("Fehler beim Abrufen der Aufgaben");
         const data = await response.json();
